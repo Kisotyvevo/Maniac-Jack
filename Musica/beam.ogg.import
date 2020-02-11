@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beam.ogg-e14f52a117bf8825ddde1779c28b2b90.oggstr"
+
+[deps]
+
+source_file="res://Musica/beam.ogg"
+dest_files=[ "res://.import/beam.ogg-e14f52a117bf8825ddde1779c28b2b90.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

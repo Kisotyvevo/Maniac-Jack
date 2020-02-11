@@ -1,0 +1,63 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Script/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Players/enemies/enemy-death/enemy-death-1.png" type="Texture" id=2]
+[ext_resource path="res://Players/enemies/enemy-death/enemy-death-2.png" type="Texture" id=3]
+[ext_resource path="res://Players/enemies/enemy-death/enemy-death-3.png" type="Texture" id=4]
+[ext_resource path="res://Players/enemies/enemy-death/enemy-death-4.png" type="Texture" id=5]
+[ext_resource path="res://Players/enemies/enemy-death/enemy-death-5.png" type="Texture" id=6]
+[ext_resource path="res://Players/enemies/enemy-death/enemy-death-6.png" type="Texture" id=7]
+[ext_resource path="res://Players/enemies/ant/ant-1.png" type="Texture" id=8]
+[ext_resource path="res://Players/enemies/ant/ant-2.png" type="Texture" id=9]
+[ext_resource path="res://Players/enemies/ant/ant-3.png" type="Texture" id=10]
+[ext_resource path="res://Players/enemies/ant/ant-4.png" type="Texture" id=11]
+[ext_resource path="res://Players/enemies/ant/ant-5.png" type="Texture" id=12]
+[ext_resource path="res://Players/enemies/ant/ant-6.png" type="Texture" id=13]
+[ext_resource path="res://Players/enemies/ant/ant-7.png" type="Texture" id=14]
+[ext_resource path="res://Players/enemies/ant/ant-8.png" type="Texture" id=15]
+[ext_resource path="res://Musica/enemy-death.ogg" type="AudioStream" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "dead",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Caminar",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.6736, 10 )
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Caminar"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5.23219, 5.23219 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 20.413, 1.3226 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Muerte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 16 )
+attenuation = 0.31864
+
+[node name="Timer2" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

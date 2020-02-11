@@ -1,0 +1,217 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Script/Titles.gd" type="Script" id=1]
+[ext_resource path="res://Script/cielo.gd" type="Script" id=2]
+[ext_resource path="res://environment/layers/back.png" type="Texture" id=3]
+[ext_resource path="res://environment/layers/middle.png" type="Texture" id=4]
+[ext_resource path="res://Players/acorn/acorn-1.png" type="Texture" id=5]
+[ext_resource path="res://logo (1).png" type="Texture" id=6]
+[ext_resource path="res://press-enter-text.png" type="Texture" id=7]
+[ext_resource path="res://title-screen2.png" type="Texture" id=8]
+[ext_resource path="res://credits.png" type="Texture" id=9]
+[ext_resource path="res://title-screen.png" type="Texture" id=10]
+[ext_resource path="res://boton back.png" type="Texture" id=11]
+[ext_resource path="res://Musica/1_4943166951473021037.ogg" type="AudioStream" id=12]
+
+[node name="Titles" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="cielo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1090, 0 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/cielo"]
+position = Vector2( 507.73, 304.348 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 3 )
+
+[node name="plantas" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1090, 0 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/plantas"]
+position = Vector2( 58.2673, 788.405 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/plantas"]
+position = Vector2( 470.974, 776.275 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/plantas"]
+position = Vector2( 835.289, 757.75 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 4 )
+
+[node name="Nuces" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Nuces"]
+position = Vector2( 650.755, 268.931 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="Nuces"]
+position = Vector2( 530.123, 268.931 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="Nuces"]
+position = Vector2( 409.488, 270.098 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 5 )
+
+[node name="Sprite4" type="Sprite" parent="Nuces"]
+position = Vector2( 588.273, 268.931 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 5 )
+
+[node name="Sprite5" type="Sprite" parent="Nuces"]
+position = Vector2( 343.834, 270.098 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 5 )
+
+[node name="Sprite6" type="Sprite" parent="Nuces"]
+position = Vector2( 472.307, 267.765 )
+scale = Vector2( 2.84442, 2.58139 )
+texture = ExtResource( 5 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 640.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 20
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_top = 20.0
+margin_right = 1024.0
+margin_bottom = 620.0
+size_flags_horizontal = 4
+custom_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 6 )
+
+[node name="Inicio" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -98.0
+margin_top = 164.0
+margin_right = 91.0
+margin_bottom = 211.0
+flat = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Inicio"]
+position = Vector2( 92.3149, 21.9732 )
+scale = Vector2( 2.3588, 2.75392 )
+texture = ExtResource( 7 )
+
+[node name="Creditos" type="Sprite" parent="."]
+position = Vector2( 71.9254, 570.786 )
+scale = Vector2( 0.763371, 0.38765 )
+texture = ExtResource( 8 )
+
+[node name="Creditos" type="Button" parent="Creditos"]
+margin_left = -75.0
+margin_top = -43.5796
+margin_right = 75.0
+margin_bottom = 42.4204
+flat = true
+
+[node name="Sprite" type="Sprite" parent="Creditos/Creditos"]
+position = Vector2( 72.0488, 44.6232 )
+scale = Vector2( 1, 1.69697 )
+texture = ExtResource( 9 )
+
+[node name="title-Inicio" type="Sprite" parent="."]
+visible = false
+position = Vector2( 496.274, 398.042 )
+scale = Vector2( 2.63163, 2.31789 )
+texture = ExtResource( 10 )
+
+[node name="Button-Inicio" type="Button" parent="title-Inicio"]
+margin_left = -37.8778
+margin_top = 32.8032
+margin_right = 38.1222
+margin_bottom = 52.8032
+flat = true
+
+[node name="Move" type="Label" parent="title-Inicio/Button-Inicio"]
+margin_left = -20.3874
+margin_top = -23.1469
+margin_right = 19.6126
+margin_bottom = -9.14694
+text = "Move"
+
+[node name="Shoot" type="Label" parent="title-Inicio/Button-Inicio"]
+margin_left = 58.0598
+margin_top = -23.1469
+margin_right = 98.0598
+margin_bottom = -9.14694
+text = "Shoot"
+
+[node name="Creditos2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 495.757, 389.271 )
+scale = Vector2( 2.46665, 2.46665 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Creditos2"]
+margin_left = -72.2473
+margin_top = -34.7449
+margin_right = 47.7527
+margin_bottom = 30.2551
+text = "Programador:
+Azcuenaga Cristian
+Musica:
+Francisco Bauman"
+
+[node name="Atras" type="Button" parent="Creditos2"]
+margin_left = -92.0
+margin_top = -55.0
+margin_right = -73.0
+margin_bottom = -35.0
+flat = true
+
+[node name="Sprite" type="Sprite" parent="Creditos2/Atras"]
+position = Vector2( 11.2044, 10.0523 )
+scale = Vector2( 0.594481, 0.615617 )
+texture = ExtResource( 11 )
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -61.2684
+margin_top = -22.3801
+margin_right = -13.2684
+margin_bottom = -8.38013
+custom_colors/font_color = Color( 1, 0.890196, 0, 1 )
+text = "V: 2.0.1"
+[connection signal="pressed" from="Inicio" to="." method="_on_Inicio_pressed"]
+[connection signal="pressed" from="Creditos/Creditos" to="." method="_on_Creditos_pressed"]
+[connection signal="pressed" from="title-Inicio/Button-Inicio" to="." method="_on_ButtonInicio_pressed"]
+[connection signal="pressed" from="Creditos2/Atras" to="." method="_on_Atras_pressed"]

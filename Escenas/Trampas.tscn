@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Script/trampas.gd" type="Script" id=1]
+[ext_resource path="res://environment/props/spikes.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.87454, 6.22638 )
+
+[node name="Trampas" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -1.64816 )
+scale = Vector2( 1, 1.32963 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.366261, -0.732517 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.01
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
