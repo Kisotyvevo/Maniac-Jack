@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
 [ext_resource path="res://Players/player/crouch/player-crouch-1.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://flatLight36.png" type="Texture" id=31]
 [ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=32]
 [ext_resource path="res://UI/vidas.png" type="Texture" id=33]
+[ext_resource path="res://Musica/Pasos.wav" type="AudioStream" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -51,15 +52,15 @@ animations = [ {
 "name": "Agachado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "Hurt",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "Hurt",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -89,7 +90,7 @@ gravity = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -191,6 +192,9 @@ text = "99 : 99"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Pasos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 34 )
 [connection signal="pressed" from="Camera2D/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
 [connection signal="released" from="Camera2D/TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
 [connection signal="pressed" from="Camera2D/TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]
@@ -206,3 +210,4 @@ __meta__ = {
 [connection signal="timeout" from="Timer4" to="." method="_on_Timer4_timeout"]
 [connection signal="timeout" from="Timer5" to="." method="_on_Timer5_timeout"]
 [connection signal="timeout" from="Timer6" to="." method="_on_Timer6_timeout"]
+[connection signal="finished" from="Pasos" to="." method="_on_Pasos_finished"]

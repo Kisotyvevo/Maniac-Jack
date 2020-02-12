@@ -213,12 +213,14 @@ func Saltar():
 				on_ground = false 
 				if $Salto.playing == false:
 					$Salto.play()
+					$Pasos.stop()
 
 func CorrerAdelante():
 	if Adelante == true:
 		if Agachado == false:
 			velocity.x = Speed
 			if on_ground == true:
+				Pasos()
 				$AnimatedSprite.play("Run")
 				$AnimatedSprite.flip_h = false
 				if sign($Position2D.position.x) == -1:
@@ -229,6 +231,7 @@ func CorrerAtras():
 		if Agachado == false:
 			velocity.x = -Speed
 			if on_ground == true:
+				Pasos()
 				$AnimatedSprite.play("Run")
 				$AnimatedSprite.flip_h = true
 				if sign($Position2D.position.x) == 1:
@@ -275,6 +278,7 @@ func Quieto():
 				if Agachado == false:
 					if on_ground == true:
 						$AnimatedSprite.play("Idle")
+						$Pasos.stop()
 
 
 func _on_Timer4_timeout():
@@ -322,3 +326,12 @@ func DescontarSegundos():
 func _on_Timer6_timeout():
 	Delay = false
 	pass # Replace with function body.
+
+
+func _on_Pasos_finished():
+	$Pasos.play()
+	pass # Replace with function body.
+	
+func Pasos():
+	if $Pasos.playing == false:
+		$Pasos.play()

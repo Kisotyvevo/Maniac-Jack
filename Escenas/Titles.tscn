@@ -226,6 +226,9 @@ margin_right = -13.2684
 margin_bottom = -8.38013
 custom_colors/font_color = Color( 1, 0.890196, 0, 1 )
 text = "V: 2.0.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
