@@ -335,3 +335,7 @@ func _on_Pasos_finished():
 func Pasos():
 	if $Pasos.playing == false:
 		$Pasos.play()
+		
+func Rotacion():
+	$AnimatedSprite.rotation = 30
+	pass

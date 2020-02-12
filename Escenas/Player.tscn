@@ -164,6 +164,7 @@ one_shot = true
 [node name="Salto" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -1.11881, 7.56505 )
 stream = ExtResource( 24 )
+bus = "Salto"
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 2.0
@@ -195,6 +196,7 @@ __meta__ = {
 
 [node name="Pasos" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 34 )
+bus = "Pasos"
 [connection signal="pressed" from="Camera2D/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
 [connection signal="released" from="Camera2D/TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
 [connection signal="pressed" from="Camera2D/TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]
