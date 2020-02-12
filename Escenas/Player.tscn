@@ -89,6 +89,7 @@ gravity = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -167,7 +168,7 @@ stream = ExtResource( 24 )
 wait_time = 2.0
 
 [node name="Timer3" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.3
 
 [node name="Timer4" type="Timer" parent="."]
 wait_time = 0.8
