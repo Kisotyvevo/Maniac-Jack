@@ -15,6 +15,7 @@ func _on_Inicio_pressed():
 	$Nuces/Sprite4.visible = false
 	$Nuces/Sprite5.visible = false
 	$Nuces/Sprite6.visible = false
+	$Loading/AnimatedSprite.play("Cargando")
 	$Timer.start()
 	load(Mundo)
 	

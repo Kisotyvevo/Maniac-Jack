@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Script/Titles.gd" type="Script" id=1]
 [ext_resource path="res://Script/cielo.gd" type="Script" id=2]
@@ -13,6 +13,17 @@
 [ext_resource path="res://boton back.png" type="Texture" id=11]
 [ext_resource path="res://Musica/1_4943166951473021037.ogg" type="AudioStream" id=12]
 [ext_resource path="res://Loading.png" type="Texture" id=13]
+[ext_resource path="res://Punto3.png" type="Texture" id=14]
+[ext_resource path="res://Punto2.png" type="Texture" id=15]
+[ext_resource path="res://Punto.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Cargando",
+"speed": 5.0
+} ]
 
 [node name="Titles" type="Node"]
 script = ExtResource( 1 )
@@ -221,8 +232,12 @@ wait_time = 4.0
 
 [node name="Loading" type="Sprite" parent="."]
 visible = false
-position = Vector2( 495.949, 320.312 )
+position = Vector2( 495.949, 268.495 )
 texture = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Loading"]
+frames = SubResource( 1 )
+animation = "Cargando"
 [connection signal="pressed" from="Inicio" to="." method="_on_Inicio_pressed"]
 [connection signal="pressed" from="Creditos/Creditos" to="." method="_on_Creditos_pressed"]
 [connection signal="pressed" from="title-Inicio/Button-Inicio" to="." method="_on_ButtonInicio_pressed"]
