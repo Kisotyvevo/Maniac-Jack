@@ -20,7 +20,7 @@ var Atras = false
 var Disparar = false
 var Dano2 = false
 var Segundos = 60
-var Minutos = 1
+var Minutos = 3
 var Delay = false
 
 func _ready():
@@ -43,11 +43,13 @@ func _physics_process(delta):
 	if is_dead == false:
 		
 		if Input.is_action_pressed("ui_right"):
+			OcultarBotones()
 			Adelante = true
 		if Input.is_action_just_released("ui_right"):
 			Adelante = false
 			
 		if Input.is_action_pressed("ui_left"):
+			OcultarBotones()
 			Atras = true
 		if Input.is_action_just_released("ui_left"):
 			Atras = false
@@ -61,6 +63,7 @@ func _physics_process(delta):
 #							$AnimatedSprite.play("Idle")
 #				
 		if Input.is_action_pressed("ui_down"):
+			OcultarBotones()
 			Agachado = true
 			velocity.x = 0
 			$AnimatedSprite.play("Agachado")
@@ -68,12 +71,14 @@ func _physics_process(delta):
 			Agachado = false
 		
 		if Input.is_action_pressed("ui_up"):
+			OcultarBotones()
 			Saltar = true
 		if Input.is_action_just_released("ui_up"):
 			Saltar = false
 
 		
 		if Input.is_action_just_pressed("ui_focus_next"):
+			OcultarBotones()
 			if Limite == false:
 				Limite = true
 				$Timer3.start()
@@ -287,7 +292,7 @@ func _on_Timer4_timeout():
 
 
 func _on_Timer5_timeout():
-	OcultarBotones()
+	#OcultarBotones()
 	pass # Replace with function body.
 
 func OcultarBotones():
@@ -296,6 +301,7 @@ func OcultarBotones():
 	$Camera2D/TouchScreenButton3.hide()
 	$Camera2D/TouchScreenButton4.hide()
 	$Camera2D/TouchScreenButton5.show()
+	$Camera2D/TouchScreenButton6.hide()
 	pass
 
 func MostrarBotones():
@@ -304,6 +310,7 @@ func MostrarBotones():
 	$Camera2D/TouchScreenButton3.show()
 	$Camera2D/TouchScreenButton4.show()
 	$Camera2D/TouchScreenButton5.hide()
+	$Camera2D/TouchScreenButton6.show()
 	pass
 
 
@@ -339,3 +346,15 @@ func Pasos():
 func Rotacion():
 	$AnimatedSprite.rotation = 30
 	pass
+
+
+func _on_TouchScreenButton6_pressed():
+	Agachado = true
+	velocity.x = 0
+	$AnimatedSprite.play("Agachado")
+	pass # Replace with function body.
+
+
+func _on_TouchScreenButton6_released():
+	Agachado = false
+	pass # Replace with function body.

@@ -3,6 +3,8 @@
 [ext_resource path="res://Script/trampas.gd" type="Script" id=1]
 [ext_resource path="res://environment/props/spikes.png" type="Texture" id=2]
 
+
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.87454, 6.22638 )
 

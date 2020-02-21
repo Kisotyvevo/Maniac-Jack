@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
 [ext_resource path="res://Players/player/crouch/player-crouch-1.png" type="Texture" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=32]
 [ext_resource path="res://UI/vidas.png" type="Texture" id=33]
 [ext_resource path="res://Musica/Pasos.wav" type="AudioStream" id=34]
+[ext_resource path="res://Botones/Abajo.png" type="Texture" id=35]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -90,7 +91,7 @@ gravity = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -138,7 +139,7 @@ normal = ExtResource( 29 )
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="Camera2D"]
 modulate = Color( 1, 1, 1, 0.588235 )
-position = Vector2( 110.391, 42.7749 )
+position = Vector2( 112.462, 42.7749 )
 scale = Vector2( 0.3, 0.3 )
 normal = ExtResource( 28 )
 
@@ -147,6 +148,12 @@ modulate = Color( 1, 1, 1, 0.588235 )
 position = Vector2( 113.278, -4.74728 )
 scale = Vector2( 0.3, 0.3 )
 normal = ExtResource( 30 )
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 65.656, 43.2527 )
+scale = Vector2( 0.3, 0.3 )
+normal = ExtResource( 35 )
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="Camera2D"]
 modulate = Color( 1, 1, 1, 0 )
@@ -205,6 +212,8 @@ bus = "Pasos"
 [connection signal="released" from="Camera2D/TouchScreenButton3" to="." method="_on_TouchScreenButton3_released"]
 [connection signal="pressed" from="Camera2D/TouchScreenButton4" to="." method="_on_TouchScreenButton4_pressed"]
 [connection signal="released" from="Camera2D/TouchScreenButton4" to="." method="_on_TouchScreenButton4_released"]
+[connection signal="pressed" from="Camera2D/TouchScreenButton6" to="." method="_on_TouchScreenButton6_pressed"]
+[connection signal="released" from="Camera2D/TouchScreenButton6" to="." method="_on_TouchScreenButton6_released"]
 [connection signal="pressed" from="Camera2D/TouchScreenButton5" to="." method="_on_TouchScreenButton5_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

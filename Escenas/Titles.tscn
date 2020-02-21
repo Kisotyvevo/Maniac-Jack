@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Script/Titles.gd" type="Script" id=1]
 [ext_resource path="res://Script/cielo.gd" type="Script" id=2]
@@ -16,10 +16,11 @@
 [ext_resource path="res://Punto3.png" type="Texture" id=14]
 [ext_resource path="res://Punto2.png" type="Texture" id=15]
 [ext_resource path="res://Punto.png" type="Texture" id=16]
+[ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"frames": [ null, ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Cargando",
 "speed": 5.0
@@ -190,14 +191,20 @@ scale = Vector2( 2.46665, 2.46665 )
 texture = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Creditos2"]
-margin_left = -72.2473
-margin_top = -34.7449
-margin_right = 47.7527
-margin_bottom = 30.2551
+margin_left = -68.8556
+margin_top = -37.6952
+margin_right = 124.144
+margin_bottom = 59.3048
+rect_scale = Vector2( 0.7, 0.8 )
+custom_fonts/font = ExtResource( 17 )
 text = "Programador:
 Azcuenaga Cristian
+Ignacio Peralta
 Musica:
 Francisco Bauman"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Atras" type="Button" parent="Creditos2"]
 margin_left = -92.0
@@ -220,12 +227,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -61.2684
-margin_top = -22.3801
-margin_right = -13.2684
-margin_bottom = -8.38013
+margin_left = -97.8336
+margin_top = -26.8123
+margin_right = -35.8336
+margin_bottom = -9.81226
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 0.890196, 0, 1 )
-text = "V: 2.0.1"
+text = "V 0.1.0"
 __meta__ = {
 "_edit_use_anchors_": false
 }

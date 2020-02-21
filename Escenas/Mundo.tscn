@@ -26,9 +26,6 @@ format = 1
 loop_begin = 1
 loop_end = 1
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.048, 10 )
-
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 16 ) ],
@@ -44,6 +41,9 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 8.14873 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.048, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 15.6318, 31.0896 )
@@ -95,6 +95,49 @@ stream = ExtResource( 7 )
 
 [node name="Win" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource( 8 )
+
+[node name="Palanca1" type="Area2D" parent="."]
+position = Vector2( 1318.09, 278.346 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Palanca anim" type="AnimatedSprite" parent="Palanca1"]
+frames = SubResource( 3 )
+animation = "On "
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca1"]
+position = Vector2( 1.13916, 0.28479 )
+shape = SubResource( 4 )
+
+[node name="Cartel" type="Sprite" parent="Palanca1"]
+visible = false
+position = Vector2( 1.34607, -50.6347 )
+scale = Vector2( 0.436491, 0.260599 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="Palanca1/Cartel"]
+margin_left = -74.074
+margin_top = -16.0873
+margin_right = 31.926
+margin_bottom = 19.9127
+rect_scale = Vector2( 1.4, 2 )
+custom_colors/font_color = Color( 1, 0.843137, 0, 1 )
+text = "Puente activado!"
+
+[node name="Palanca2" type="Area2D" parent="."]
+position = Vector2( 2345.38, 383.565 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Palanca2 anim" type="AnimatedSprite" parent="Palanca2"]
+frames = SubResource( 3 )
+animation = "On "
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca2"]
+position = Vector2( 1.13916, 0.28479 )
+shape = SubResource( 4 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2( 1.1, 1.1 )
@@ -350,7 +393,7 @@ shape = SubResource( 2 )
 
 [node name="Cartel 2" type="Area2D" parent="Carteles"]
 visible = false
-position = Vector2( -162.447, 161.809 )
+position = Vector2( -165.836, 159.098 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -361,17 +404,22 @@ scale = Vector2( 0.283536, 0.283536 )
 texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 2"]
-margin_left = 69.6643
-margin_top = 81.5174
-margin_right = 203.664
-margin_bottom = 112.517
+margin_left = 64.0
+margin_top = 78.0
+margin_right = 242.0
+margin_bottom = 135.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-text = "Lo estas haciendo 
+custom_fonts/font = ExtResource( 20 )
+text = "Lo estas 
+haciendo 
 muy bien!"
 align = 1
 valign = 1
 uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 2"]
 position = Vector2( 88.3958, 111.363 )
@@ -410,14 +458,17 @@ scale = Vector2( 0.283536, 0.283536 )
 texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 4"]
-margin_left = 69.6643
-margin_top = 81.5174
-margin_right = 203.664
-margin_bottom = 112.517
+margin_left = 70.0
+margin_top = 76.0
+margin_right = 204.0
+margin_bottom = 153.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-text = "Aveces hay que caer
-para poder seguir"
+custom_fonts/font = ExtResource( 20 )
+text = "Aveces hay 
+que caer
+para poder 
+seguir"
 align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 4"]
@@ -447,14 +498,17 @@ scale = Vector2( 0.283536, 0.283536 )
 texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 5"]
-margin_left = 69.6643
-margin_top = 81.5174
-margin_right = 203.664
-margin_bottom = 112.517
+margin_left = 70.0
+margin_top = 76.0
+margin_right = 204.0
+margin_bottom = 153.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-text = "¿Ya te mareaste?
-Por aqui no es!!"
+custom_fonts/font = ExtResource( 20 )
+text = "¿Ya te 
+mareaste?
+Por aqui 
+no es!!"
 align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 5"]
@@ -484,14 +538,16 @@ scale = Vector2( 0.283536, 0.283536 )
 texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 6"]
-margin_left = 69.6643
-margin_top = 81.5174
-margin_right = 203.664
-margin_bottom = 112.517
+margin_left = 70.0
+margin_top = 78.0
+margin_right = 204.0
+margin_bottom = 135.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 20 )
 text = "Eso Chiqui!
-Ya casi lo tienes!"
+Ya casi lo 
+tienes!"
 align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 6"]
@@ -511,14 +567,17 @@ scale = Vector2( 0.283536, 0.283536 )
 texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 7"]
-margin_left = 69.6643
-margin_top = 81.5174
-margin_right = 203.664
-margin_bottom = 112.517
+margin_left = 70.0
+margin_top = 76.0
+margin_right = 204.0
+margin_bottom = 153.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-text = "Eres grande chiqui!
-Te voy a extrañar"
+custom_fonts/font = ExtResource( 20 )
+text = "Eres grande 
+chiqui!
+Te voy a 
+extrañar"
 align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 7"]
@@ -530,49 +589,6 @@ shape = SubResource( 2 )
 [node name="Trampas" parent="Trampa" instance=ExtResource( 14 )]
 position = Vector2( 1309.78, 178.577 )
 scale = Vector2( 2.24, 1 )
-
-[node name="Palanca1" type="Area2D" parent="."]
-position = Vector2( 1318.09, 278.346 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Palanca anim" type="AnimatedSprite" parent="Palanca1"]
-frames = SubResource( 3 )
-animation = "On "
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca1"]
-position = Vector2( 1.13916, 0.28479 )
-shape = SubResource( 4 )
-
-[node name="Cartel" type="Sprite" parent="Palanca1"]
-visible = false
-position = Vector2( 1.34607, -50.6347 )
-scale = Vector2( 0.436491, 0.260599 )
-texture = ExtResource( 13 )
-
-[node name="Label" type="Label" parent="Palanca1/Cartel"]
-margin_left = -74.074
-margin_top = -16.0873
-margin_right = 31.926
-margin_bottom = 19.9127
-rect_scale = Vector2( 1.4, 2 )
-custom_colors/font_color = Color( 1, 0.843137, 0, 1 )
-text = "Puente activado!"
-
-[node name="Palanca2" type="Area2D" parent="."]
-position = Vector2( 2345.38, 383.565 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Palanca2 anim" type="AnimatedSprite" parent="Palanca2"]
-frames = SubResource( 3 )
-animation = "On "
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca2"]
-position = Vector2( 1.13916, 0.28479 )
-shape = SubResource( 4 )
 
 [node name="Muro" type="StaticBody2D" parent="."]
 position = Vector2( 1825.08, 430.735 )
@@ -626,6 +642,8 @@ texture = ExtResource( 19 )
 [node name="Timer" type="Timer" parent="Puerta"]
 wait_time = 4.0
 one_shot = true
+[connection signal="body_entered" from="Palanca1" to="Trampa/Trampas" method="_on_Palanca1_body_entered"]
+[connection signal="body_entered" from="Palanca2" to="Muro" method="_on_Palanca2_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 1" to="." method="_on_Cartel_1_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 2" to="." method="_on_Cartel_2_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 3" to="." method="_on_Cartel_3_body_entered"]
@@ -636,8 +654,6 @@ one_shot = true
 [connection signal="body_entered" from="Carteles/Cartel 5_1" to="." method="_on_Cartel_5_1_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 6" to="." method="_on_Cartel_6_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 7" to="." method="_on_Cartel_7_body_entered"]
-[connection signal="body_entered" from="Palanca1" to="Trampa/Trampas" method="_on_Palanca1_body_entered"]
-[connection signal="body_entered" from="Palanca2" to="Muro" method="_on_Palanca2_body_entered"]
 [connection signal="timeout" from="Muro/Timer" to="Muro" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Puerta" to="." method="_on_Puerta_body_entered"]
 [connection signal="timeout" from="Puerta/Timer" to="." method="_on_Timer_timeout"]
