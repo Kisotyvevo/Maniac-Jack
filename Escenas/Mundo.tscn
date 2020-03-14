@@ -26,7 +26,7 @@ format = 1
 loop_begin = 1
 loop_end = 1
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
@@ -39,10 +39,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 8.14873 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 15.048, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -103,12 +103,12 @@ __meta__ = {
 }
 
 [node name="Palanca anim" type="AnimatedSprite" parent="Palanca1"]
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "On "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca1"]
 position = Vector2( 1.13916, 0.28479 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Cartel" type="Sprite" parent="Palanca1"]
 visible = false
@@ -132,12 +132,12 @@ __meta__ = {
 }
 
 [node name="Palanca2 anim" type="AnimatedSprite" parent="Palanca2"]
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "On "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca2"]
 position = Vector2( 1.13916, 0.28479 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2( 1.1, 1.1 )
@@ -389,7 +389,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 1"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 2" type="Area2D" parent="Carteles"]
 visible = false
@@ -423,7 +423,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 2"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 3" type="Area2D" parent="Carteles"]
 position = Vector2( 157.32, 165.109 )
@@ -433,7 +433,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 3"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 3_1" type="Area2D" parent="Carteles"]
 position = Vector2( 150.867, -15.2085 )
@@ -443,7 +443,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 3_1"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 4" type="Area2D" parent="Carteles"]
 visible = false
@@ -473,7 +473,7 @@ align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 4"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 4_1" type="Area2D" parent="Carteles"]
 position = Vector2( 1179.77, 196.43 )
@@ -483,7 +483,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 4_1"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 5" type="Area2D" parent="Carteles"]
 visible = false
@@ -513,7 +513,7 @@ align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 5"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 5_1" type="Area2D" parent="Carteles"]
 position = Vector2( 1543.32, 178.107 )
@@ -523,7 +523,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 5_1"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 6" type="Area2D" parent="Carteles"]
 visible = false
@@ -552,7 +552,7 @@ align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 6"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Cartel 7" type="Area2D" parent="Carteles"]
 visible = false
@@ -582,7 +582,7 @@ align = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carteles/Cartel 7"]
 position = Vector2( 88.3958, 111.363 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Trampa" type="Node" parent="."]
 
