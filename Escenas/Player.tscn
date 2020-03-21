@@ -38,6 +38,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Agachado",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Run",
@@ -57,11 +62,6 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Agachado",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -91,7 +91,7 @@ gravity = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -103,6 +103,9 @@ current = true
 zoom = Vector2( 0.3, 0.3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+offset = Vector2( 360, 160 )
+scale = Vector2( 3.5, 3.5 )
+transform = Transform2D( 3.5, 0, 0, 3.5, 360, 160 )
 
 [node name="vidas" type="Sprite" parent="Camera2D/CanvasLayer"]
 position = Vector2( -46.1095, -29.0283 )
@@ -163,6 +166,19 @@ position = Vector2( -103.431, -48.0203 )
 scale = Vector2( 3.82176, 2.282 )
 normal = ExtResource( 31 )
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/CanvasLayer"]
+modulate = Color( 0.964706, 0.784314, 0.156863, 1 )
+margin_left = -58.6055
+margin_top = -40.8094
+margin_right = 73.3946
+margin_bottom = -10.8094
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/normal_font = ExtResource( 32 )
+text = "99 : 99"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 25.5, 5.647 )
 
@@ -189,19 +205,6 @@ wait_time = 6.0
 
 [node name="Timer6" type="Timer" parent="."]
 wait_time = 0.6
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-modulate = Color( 0.964706, 0.784314, 0.156863, 1 )
-margin_left = -112.283
-margin_top = -84.0296
-margin_right = 19.7171
-margin_bottom = -54.0296
-rect_scale = Vector2( 0.6, 0.6 )
-custom_fonts/normal_font = ExtResource( 32 )
-text = "99 : 99"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Pasos" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 34 )

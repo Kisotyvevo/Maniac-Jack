@@ -25,7 +25,7 @@ var Delay = false
 
 func _ready():
 	$Timer5.start()
-	$Camera2D/TouchScreenButton5.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton5.hide()
 
 func _physics_process(delta):
 	Quieto()
@@ -35,7 +35,7 @@ func _physics_process(delta):
 	Disparar()
 	DescontarMinutos()
 	DescontarSegundos()
-	$RichTextLabel.text = str(Minutos, " : ",Segundos)
+	$Camera2D/CanvasLayer/RichTextLabel.text = str(Minutos, " : ",Segundos)
 	#print(Saltar)
 	print(Segundos)
 	print(Minutos)
@@ -130,13 +130,13 @@ func _physics_process(delta):
 						$Timer2.start()
 						
 		if Vida == 2:
-			$Camera2D/vidas/Vida3.play("NoVida")
+			$Camera2D/CanvasLayer/vidas/Vida3.play("NoVida")
 				
 		if Vida == 1:
-			$Camera2D/vidas/Vida2.play("NoVida")
+			$Camera2D/CanvasLayer/vidas/Vida2.play("NoVida")
 				
 		if Vida == 0:
-			$Camera2D/vidas/Vida.play("NoVida")
+			$Camera2D/CanvasLayer/vidas/Vida.play("NoVida")
 			Vida -= 1
 			dead()
 			
@@ -296,21 +296,21 @@ func _on_Timer5_timeout():
 	pass # Replace with function body.
 
 func OcultarBotones():
-	$Camera2D/TouchScreenButton.hide()
-	$Camera2D/TouchScreenButton2.hide()
-	$Camera2D/TouchScreenButton3.hide()
-	$Camera2D/TouchScreenButton4.hide()
-	$Camera2D/TouchScreenButton5.show()
-	$Camera2D/TouchScreenButton6.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton2.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton3.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton4.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton5.show()
+	$Camera2D/CanvasLayer/TouchScreenButton6.hide()
 	pass
 
 func MostrarBotones():
-	$Camera2D/TouchScreenButton.show()
-	$Camera2D/TouchScreenButton2.show()
-	$Camera2D/TouchScreenButton3.show()
-	$Camera2D/TouchScreenButton4.show()
-	$Camera2D/TouchScreenButton5.hide()
-	$Camera2D/TouchScreenButton6.show()
+	$Camera2D/CanvasLayer/TouchScreenButton.show()
+	$Camera2D/CanvasLayer/TouchScreenButton2.show()
+	$Camera2D/CanvasLayer/TouchScreenButton3.show()
+	$Camera2D/CanvasLayer/TouchScreenButton4.show()
+	$Camera2D/CanvasLayer/TouchScreenButton5.hide()
+	$Camera2D/CanvasLayer/TouchScreenButton6.show()
 	pass
 
 
@@ -320,7 +320,7 @@ func _on_TouchScreenButton5_pressed():
 	
 func DescontarMinutos():
 	if Segundos == 0:
-		Segundos = 60
+		Segundos = 59
 		Minutos -= 1
 
 func DescontarSegundos():
