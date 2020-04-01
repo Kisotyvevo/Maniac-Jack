@@ -38,16 +38,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Agachado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Run",
-"speed": 18.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "Jump",
@@ -62,6 +52,16 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Agachado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Run",
+"speed": 18.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -91,7 +91,6 @@ gravity = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -103,9 +102,9 @@ current = true
 zoom = Vector2( 0.3, 0.3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-offset = Vector2( 360, 160 )
+offset = Vector2( 360, 155 )
 scale = Vector2( 3.5, 3.5 )
-transform = Transform2D( 3.5, 0, 0, 3.5, 360, 160 )
+transform = Transform2D( 3.5, 0, 0, 3.5, 360, 155 )
 
 [node name="vidas" type="Sprite" parent="Camera2D/CanvasLayer"]
 position = Vector2( -46.1095, -29.0283 )
