@@ -10,17 +10,17 @@
 [ext_resource path="res://title-screen2.png" type="Texture" id=8]
 [ext_resource path="res://credits.png" type="Texture" id=9]
 [ext_resource path="res://title-screen.png" type="Texture" id=10]
-[ext_resource path="res://boton back.png" type="Texture" id=11]
-[ext_resource path="res://Musica/1_4943166951473021037.ogg" type="AudioStream" id=12]
-[ext_resource path="res://Loading.png" type="Texture" id=13]
-[ext_resource path="res://Punto3.png" type="Texture" id=14]
-[ext_resource path="res://Punto2.png" type="Texture" id=15]
-[ext_resource path="res://Punto.png" type="Texture" id=16]
-[ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=17]
+[ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=11]
+[ext_resource path="res://boton back.png" type="Texture" id=12]
+[ext_resource path="res://Musica/1_4943166951473021037.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Loading.png" type="Texture" id=14]
+[ext_resource path="res://Punto.png" type="Texture" id=15]
+[ext_resource path="res://Punto2.png" type="Texture" id=16]
+[ext_resource path="res://Punto3.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ null, ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"frames": [ null, ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Cargando",
 "speed": 5.0
@@ -196,7 +196,7 @@ margin_top = -37.6952
 margin_right = 124.144
 margin_bottom = 59.3048
 rect_scale = Vector2( 0.7, 0.8 )
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 11 )
 text = "Programador:
 Azcuenaga Cristian
 Ignacio Peralta
@@ -216,10 +216,10 @@ flat = true
 [node name="Sprite" type="Sprite" parent="Creditos2/Atras"]
 position = Vector2( 11.2044, 10.0523 )
 scale = Vector2( 0.594481, 0.615617 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Menu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 autoplay = true
 
 [node name="Label" type="Label" parent="."]
@@ -232,7 +232,7 @@ margin_top = -26.8123
 margin_right = -35.8336
 margin_bottom = -9.81226
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 1, 0.890196, 0, 1 )
 text = "V 0.1.0"
 __meta__ = {
@@ -245,7 +245,7 @@ wait_time = 4.0
 [node name="Loading" type="Sprite" parent="."]
 visible = false
 position = Vector2( 495.949, 268.495 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Loading"]
 frames = SubResource( 1 )

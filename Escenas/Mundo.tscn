@@ -8,18 +8,18 @@
 [ext_resource path="res://Musica/1_4943166951473021036.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Musica/jump.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Musica/1_4945053533037658227.ogg" type="AudioStream" id=8]
-[ext_resource path="res://Script/cielo.gd" type="Script" id=9]
-[ext_resource path="res://environment/layers/back.png" type="Texture" id=10]
-[ext_resource path="res://Escenas/Enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Escenas/Espinas.tscn" type="PackedScene" id=12]
-[ext_resource path="res://title-screen2.png" type="Texture" id=13]
-[ext_resource path="res://Escenas/Trampas.tscn" type="PackedScene" id=14]
-[ext_resource path="res://environment/props/crank-up.png" type="Texture" id=15]
-[ext_resource path="res://environment/props/crank-down.png" type="Texture" id=16]
-[ext_resource path="res://Script/Muro.gd" type="Script" id=17]
-[ext_resource path="res://environment/props/face-block.png" type="Texture" id=18]
-[ext_resource path="res://logo (1).png" type="Texture" id=19]
-[ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=20]
+[ext_resource path="res://environment/props/crank-up.png" type="Texture" id=9]
+[ext_resource path="res://environment/props/crank-down.png" type="Texture" id=10]
+[ext_resource path="res://title-screen2.png" type="Texture" id=11]
+[ext_resource path="res://Script/cielo.gd" type="Script" id=12]
+[ext_resource path="res://environment/layers/back.png" type="Texture" id=13]
+[ext_resource path="res://Escenas/Enemy.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Escenas/Espinas.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=16]
+[ext_resource path="res://Escenas/Trampas.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Script/Muro.gd" type="Script" id=18]
+[ext_resource path="res://environment/props/face-block.png" type="Texture" id=19]
+[ext_resource path="res://logo (1).png" type="Texture" id=20]
 
 [sub_resource type="AudioStreamSample" id=1]
 format = 1
@@ -28,12 +28,12 @@ loop_end = 1
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "On ",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "Off",
 "speed": 5.0
@@ -114,7 +114,7 @@ shape = SubResource( 3 )
 visible = false
 position = Vector2( 1.34607, -50.6347 )
 scale = Vector2( 0.436491, 0.260599 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Palanca1/Cartel"]
 margin_left = -74.074
@@ -145,17 +145,17 @@ transform = Transform2D( 1.1, 0, 0, 1.1, 0, 0 )
 
 [node name="cielo" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 470, 0 )
-script = ExtResource( 9 )
+script = ExtResource( 12 )
 
 [node name="Cielo2" type="Sprite" parent="ParallaxBackground/cielo"]
 position = Vector2( 111.341, 511.753 )
 scale = Vector2( 1.2491, 1.77714 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 
 [node name="Cielo" type="Sprite" parent="ParallaxBackground/cielo"]
 position = Vector2( 109.787, 86.1436 )
 scale = Vector2( 1.2491, 1.77714 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 
 [node name="plantas" type="ParallaxLayer" parent="ParallaxBackground"]
 
@@ -174,186 +174,187 @@ offset = Vector2( 21.1246, 85.1155 )
 
 [node name="Enemy" type="Node" parent="."]
 
-[node name="Enemy" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 206.26, 89.6143 )
 
-[node name="Enemy2" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy2" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 219.024, 270.946 )
 
-[node name="Enemy19" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy19" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 60.4668, 270.946 )
 
-[node name="Enemy3" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy3" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 733.09, 300.874 )
 
-[node name="Enemy4" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy4" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1068.02, 300.434 )
 
-[node name="Enemy6" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy6" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 521.389, 104.579 )
 
-[node name="Enemy7" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy7" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 933.786, 75.0902 )
 
-[node name="Enemy8" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy8" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1410.82, 104.908 )
 
-[node name="Enemy9" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy9" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1513.96, 105.027 )
 
-[node name="Enemy10" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy10" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1730.99, 76.0168 )
 
-[node name="Enemy11" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy11" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1839.86, 76.9433 )
 
-[node name="Enemy12" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy12" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 2062.7, 167.285 )
 
-[node name="Enemy13" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy13" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1985.19, 285.353 )
 
-[node name="Enemy14" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy14" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1592.49, 284.84 )
 
-[node name="Enemy15" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy15" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1734.17, 286.38 )
 
-[node name="Enemy16" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy16" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1798.33, 420.361 )
 
-[node name="Enemy17" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy17" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1639.2, 419.848 )
 
-[node name="Enemy18" parent="Enemy" instance=ExtResource( 11 )]
+[node name="Enemy18" parent="Enemy" instance=ExtResource( 14 )]
 position = Vector2( 1675.65, 526.623 )
 
 [node name="Coins" type="Node" parent="."]
 
 [node name="Espinas2" type="Node" parent="."]
+editor/display_folded = true
 
-[node name="Espinas" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 563.112, 311.506 )
 
-[node name="Espinas4" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas4" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 114.671, 160.639 )
 
-[node name="Espinas37" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas37" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 130.439, 160.931 )
 
-[node name="Espinas41" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas41" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 145.914, 160.931 )
 
-[node name="Espinas42" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas42" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 157.01, 160.639 )
 
-[node name="Espinas27" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas27" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 457.884, 115.839 )
 
-[node name="Espinas28" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas28" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 577.51, 116.315 )
 
-[node name="Espinas29" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas29" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 639.628, 115.991 )
 
-[node name="Espinas39" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas39" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 659.364, 115.991 )
 
-[node name="Espinas40" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas40" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 678.776, 115.668 )
 
-[node name="Espinas30" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas30" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 790.459, 114.859 )
 scale = Vector2( 1, 1.56 )
 
-[node name="Espinas31" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas31" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1453.11, 115.228 )
 
-[node name="Espinas33" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas33" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1691.5, 190.734 )
 
-[node name="Espinas34" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas34" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1657.95, 295.878 )
 
-[node name="Espinas35" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas35" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1673.47, 295.28 )
 
-[node name="Espinas38" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas38" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1736.94, 430.593 )
 
-[node name="Espinas36" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas36" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 2112.79, 176.554 )
 
-[node name="Espinas2" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas2" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 578.927, 311.506 )
 
-[node name="Espinas3" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas3" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 594.065, 311.28 )
 
-[node name="Espinas5" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas5" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 668.183, 340.721 )
 
-[node name="Espinas6" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas6" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 683.065, 340.721 )
 
-[node name="Espinas7" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas7" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 698.271, 341.045 )
 
-[node name="Espinas9" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas9" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 818.302, 356.574 )
 
-[node name="Espinas17" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas17" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 968.051, 551.208 )
 
-[node name="Espinas12" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas12" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 863.94, 356.348 )
 
-[node name="Espinas20" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas20" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1013.69, 550.982 )
 
-[node name="Espinas10" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas10" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 833.439, 356.348 )
 
-[node name="Espinas18" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas18" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 983.188, 550.982 )
 
-[node name="Espinas13" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas13" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 879.078, 356.122 )
 
-[node name="Espinas21" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas21" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1028.83, 550.756 )
 
-[node name="Espinas11" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas11" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 848.803, 356.348 )
 
-[node name="Espinas19" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas19" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 998.552, 550.982 )
 
-[node name="Espinas14" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas14" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 894.441, 356.122 )
 
-[node name="Espinas22" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas22" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1119.03, 551.02 )
 
-[node name="Espinas15" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas15" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 909.353, 356.348 )
 
-[node name="Espinas23" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas23" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1133.94, 551.246 )
 
-[node name="Espinas25" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas25" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1164.25, 551.773 )
 
-[node name="Espinas16" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas16" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 924.491, 356.348 )
 
-[node name="Espinas32" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas32" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1238.58, 312.305 )
 
-[node name="Espinas24" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas24" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1149.08, 551.246 )
 
-[node name="Espinas26" parent="Espinas2" instance=ExtResource( 12 )]
+[node name="Espinas26" parent="Espinas2" instance=ExtResource( 15 )]
 position = Vector2( 1179.38, 551.773 )
 
 [node name="Carteles" type="Node" parent="."]
@@ -367,7 +368,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Carteles/Cartel 1"]
 position = Vector2( 89.8048, 87.9579 )
 scale = Vector2( 0.283536, 0.283536 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 1"]
 anchor_right = 1.0
@@ -377,7 +378,7 @@ margin_right = 229.742
 margin_bottom = 154.366
 rect_scale = Vector2( 0.26, 0.28 )
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 16 )
 text = "CUIDADO!
 Las explociones 
 son
@@ -401,7 +402,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Carteles/Cartel 2"]
 position = Vector2( 89.8048, 87.9579 )
 scale = Vector2( 0.283536, 0.283536 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 2"]
 margin_left = 64.0
@@ -410,7 +411,7 @@ margin_right = 242.0
 margin_bottom = 135.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 16 )
 text = "Lo estas 
 haciendo 
 muy bien!"
@@ -455,7 +456,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Carteles/Cartel 4"]
 position = Vector2( 89.8048, 87.9579 )
 scale = Vector2( 0.283536, 0.283536 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 4"]
 margin_left = 70.0
@@ -464,7 +465,7 @@ margin_right = 204.0
 margin_bottom = 153.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 16 )
 text = "Aveces hay 
 que caer
 para poder 
@@ -495,7 +496,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Carteles/Cartel 5"]
 position = Vector2( 89.8048, 87.9579 )
 scale = Vector2( 0.283536, 0.283536 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 5"]
 margin_left = 70.0
@@ -504,7 +505,7 @@ margin_right = 204.0
 margin_bottom = 153.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 16 )
 text = "¿Ya te 
 mareaste?
 Por aqui 
@@ -535,7 +536,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Carteles/Cartel 6"]
 position = Vector2( 89.8048, 87.9579 )
 scale = Vector2( 0.283536, 0.283536 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 6"]
 margin_left = 70.0
@@ -544,7 +545,7 @@ margin_right = 204.0
 margin_bottom = 135.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 16 )
 text = "Eso Chiqui!
 Ya casi lo 
 tienes!"
@@ -564,7 +565,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Carteles/Cartel 7"]
 position = Vector2( 89.8048, 87.9579 )
 scale = Vector2( 0.283536, 0.283536 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Carteles/Cartel 7"]
 margin_left = 70.0
@@ -573,7 +574,7 @@ margin_right = 204.0
 margin_bottom = 153.0
 rect_scale = Vector2( 0.3, 0.3 )
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 16 )
 text = "Eres grande 
 chiqui!
 Te voy a 
@@ -586,24 +587,24 @@ shape = SubResource( 4 )
 
 [node name="Trampa" type="Node" parent="."]
 
-[node name="Trampas" parent="Trampa" instance=ExtResource( 14 )]
+[node name="Trampas" parent="Trampa" instance=ExtResource( 17 )]
 position = Vector2( 1309.78, 178.577 )
 scale = Vector2( 2.24, 1 )
 
 [node name="Muro" type="StaticBody2D" parent="."]
 position = Vector2( 1825.08, 430.735 )
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="block" type="Sprite" parent="Muro"]
 position = Vector2( -54.2379, 94.0681 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="block2" type="Sprite" parent="Muro"]
 position = Vector2( -54.0001, 64.3398 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Muro"]
 position = Vector2( -53.8708, 79.8947 )
@@ -622,7 +623,7 @@ shape = SubResource( 6 )
 
 [node name="title-screen2" type="Sprite" parent="Puerta"]
 position = Vector2( -22.6045, -36.9724 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Puerta/title-screen2"]
 margin_left = -80.4662
@@ -637,7 +638,7 @@ align = 1
 [node name="logo (1)" type="Sprite" parent="Puerta/title-screen2"]
 position = Vector2( 1.30371, 43.1482 )
 scale = Vector2( 0.165371, 0.153379 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 
 [node name="Timer" type="Timer" parent="Puerta"]
 wait_time = 4.0
