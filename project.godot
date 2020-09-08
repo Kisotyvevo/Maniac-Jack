@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Maniac Jack"
-run/main_scene="res://Escenas/Mundo 2.tscn"
+run/main_scene="res://Escenas/Titles.tscn"
 boot_splash/image="res://logo 1920 2.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://heart.png"
