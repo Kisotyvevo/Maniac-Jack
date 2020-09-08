@@ -6,6 +6,9 @@ const jump_power = -250
 const FLOOR = Vector2(0, -1)
 
 const FIREBALL = preload("res://Escenas/Fireball.tscn")
+var MunicionActual = 5
+var MunicionMax = 15
+var PoderDisparar = false
 
 var velocity = Vector2()
 var on_ground = false
@@ -17,7 +20,7 @@ var Limite = false
 var Saltar = false
 var Adelante = false
 var Atras = false
-var Disparar = false
+
 var Dano2 = false
 var Segundos = 60
 var Minutos = 3
@@ -30,11 +33,12 @@ func _ready():
 func _physics_process(delta):
 	Quieto()
 	Saltar()
+	DisparosSIoNo()
 	CorrerAdelante()
 	CorrerAtras()
-	Disparar()
 	DescontarMinutos()
 	DescontarSegundos()
+	Munciones_en_pantalla()
 	$Camera2D/CanvasLayer/RichTextLabel.text = str(Minutos, " : ",Segundos)
 	#print(Saltar)
 	print(Segundos)
@@ -75,26 +79,21 @@ func _physics_process(delta):
 			Saltar = true
 		if Input.is_action_just_released("ui_up"):
 			Saltar = false
-
 		
 		if Input.is_action_just_pressed("ui_focus_next"):
 			OcultarBotones()
-			if Limite == false:
-				Limite = true
+			if PoderDisparar == true:
+				MunicionActual -=1
 				$Timer3.start()
 				var Fireball = FIREBALL.instance()
 				get_parent().add_child(Fireball)
 				Fireball.position = $Position2D.global_position
-			
 				if sign($Position2D.position.x) == 1:
 					Fireball.set_fireball_direction(1)
 					$Disparo.play()
 				else:
 					Fireball.set_fireball_direction(-1)
 					$Disparo.play()
-
-			
-	
 		velocity.y += gravity
 		
 		if is_on_floor():
@@ -149,7 +148,11 @@ func dead():
 	$CollisionShape2D.disabled = true
 	$Timer.start()
 	
-	
+func DisparosSIoNo():
+	if MunicionActual >=1:
+		PoderDisparar = true
+	else:
+		PoderDisparar = false
 func colision():
 	if Dano == false:
 		velocity.y = jump_power
@@ -197,10 +200,12 @@ func _on_TouchScreenButton3_pressed():
 
 
 func _on_TouchScreenButton4_pressed():
-	Disparar = true
-	$Timer5.stop()
-	MostrarBotones()
-	pass # Replace with function body.
+	if PoderDisparar == true:
+		MunicionActual -=1
+		Disparar()
+		$Timer5.stop()
+		MostrarBotones()
+		pass # Replace with function body.
 
 
 
@@ -243,19 +248,25 @@ func CorrerAtras():
 					$Position2D.position.x *= -1
 					
 func Disparar():
-	if Disparar == true:
-		if Limite == false:
-			Limite = true
-			$Timer3.start()
-			var Fireball = FIREBALL.instance()
-			get_parent().add_child(Fireball)
-			Fireball.position = $Position2D.global_position
-			if sign($Position2D.position.x) == 1:
-				Fireball.set_fireball_direction(1)
-				$Disparo.play()
-			else:
-				Fireball.set_fireball_direction(-1)
-				$Disparo.play()
+		$Timer3.start()
+		var Fireball = FIREBALL.instance()
+		get_parent().add_child(Fireball)
+		Fireball.position = $Position2D.global_position
+		if sign($Position2D.position.x) == 1:
+			Fireball.set_fireball_direction(1)
+			$Disparo.play()
+		else:
+			Fireball.set_fireball_direction(-1)
+			$Disparo.play()
+func Munciones_en_pantalla():
+	get_tree().get_nodes_in_group("Municiones")[0].text = String (MunicionActual)
+	pass
+func Recogiendo_Municiones():
+	if MunicionMax > MunicionActual:
+		MunicionActual += 1
+		get_tree().get_nodes_in_group("Municion")[0].Destruir()
+	else:
+		pass
 
 func _on_TouchScreenButton_released():
 	Atras = false
@@ -264,7 +275,7 @@ func _on_TouchScreenButton_released():
 	pass # Replace with function body.
 
 func _on_TouchScreenButton4_released():
-	Disparar = false
+	
 	$Timer5.start()
 	pass # Replace with function body.
 

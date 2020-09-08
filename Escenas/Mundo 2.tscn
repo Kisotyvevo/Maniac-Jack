@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Script/Mundo1.gd" type="Script" id=1]
 [ext_resource path="res://environment/layers/middle.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://environment/props/face-block.png" type="Texture" id=19]
 [ext_resource path="res://Escenas/Muro2.gd" type="Script" id=20]
 [ext_resource path="res://logo (1).png" type="Texture" id=21]
+[ext_resource path="res://Escenas/MunicionenSuelo.tscn" type="PackedScene" id=22]
 
 [sub_resource type="AudioStreamSample" id=1]
 format = 1
@@ -29,14 +30,14 @@ loop_end = 1
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "Off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "On ",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Off",
 "speed": 5.0
 } ]
 
@@ -99,7 +100,6 @@ stream = ExtResource( 7 )
 stream = ExtResource( 8 )
 
 [node name="Palanca1" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1618.46, -1060.34 )
 __meta__ = {
 "_edit_group_": true
@@ -129,7 +129,6 @@ custom_colors/font_color = Color( 1, 0.843137, 0, 1 )
 text = "Puente activado!"
 
 [node name="Palanca2" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 641.054, -190.648 )
 __meta__ = {
 "_edit_group_": true
@@ -177,7 +176,6 @@ scale = Vector2( 1.2491, 1.77714 )
 texture = ExtResource( 13 )
 
 [node name="plantas" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
 visible = false
 
 [node name="plantas" type="Sprite" parent="ParallaxBackground/plantas"]
@@ -399,7 +397,6 @@ position = Vector2( 858.798, -7.1515 )
 position = Vector2( 1476.46, -66.588 )
 
 [node name="4 espinas juntas" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 718.702, 224.158 )
 __meta__ = {
 "_edit_group_": true
@@ -418,7 +415,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas8" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 149.568, -810.161 )
 __meta__ = {
 "_edit_group_": true
@@ -437,7 +433,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas9" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 238.386, -315.635 )
 __meta__ = {
 "_edit_group_": true
@@ -456,7 +451,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas10" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 523.604, -435.668 )
 __meta__ = {
 "_edit_group_": true
@@ -475,7 +469,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas11" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 584.466, -435.668 )
 __meta__ = {
 "_edit_group_": true
@@ -494,7 +487,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas12" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 644.759, -435.668 )
 __meta__ = {
 "_edit_group_": true
@@ -513,7 +505,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas13" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 705.62, -436.236 )
 __meta__ = {
 "_edit_group_": true
@@ -532,7 +523,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas4" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -632.611, -225.088 )
 __meta__ = {
 "_edit_group_": true
@@ -551,7 +541,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas5" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -692.194, -225.485 )
 __meta__ = {
 "_edit_group_": true
@@ -570,7 +559,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas6" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -752.57, -225.485 )
 __meta__ = {
 "_edit_group_": true
@@ -589,7 +577,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas7" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -811.408, -225.485 )
 __meta__ = {
 "_edit_group_": true
@@ -608,7 +595,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas14" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -962.005, -240.744 )
 __meta__ = {
 "_edit_group_": true
@@ -627,7 +613,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas15" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -1022.38, -240.744 )
 __meta__ = {
 "_edit_group_": true
@@ -646,7 +631,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="2 espinas" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 28.6548, 0.321533 )
 __meta__ = {
 "_edit_group_": true
@@ -659,7 +643,6 @@ position = Vector2( 1353.53, -82.2864 )
 position = Vector2( 1369.01, -82.6269 )
 
 [node name="2 espinas2" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -0.766479, 1.40694 )
 __meta__ = {
 "_edit_group_": true
@@ -672,7 +655,6 @@ position = Vector2( 1353.53, -82.2864 )
 position = Vector2( 1369.01, -82.6269 )
 
 [node name="4 espinas juntas2" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( 28.3764, 194.76 )
 __meta__ = {
 "_edit_group_": true
@@ -691,7 +673,6 @@ position = Vector2( 1369.01, -82.6269 )
 position = Vector2( 1398.97, -82.4405 )
 
 [node name="4 espinas juntas3" type="Area2D" parent="Espinas2"]
-editor/display_folded = true
 position = Vector2( -90.7278, 195.324 )
 __meta__ = {
 "_edit_group_": true
@@ -712,7 +693,6 @@ position = Vector2( 1398.97, -82.4405 )
 [node name="Carteles" type="Node" parent="."]
 
 [node name="Cartel 1" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 visible = false
 __meta__ = {
 "_edit_group_": true
@@ -746,7 +726,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 2" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 visible = false
 position = Vector2( -165.836, 159.098 )
 __meta__ = {
@@ -781,7 +760,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 3" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 position = Vector2( 218.797, 63.6432 )
 __meta__ = {
 "_edit_group_": true
@@ -792,7 +770,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 3_1" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 position = Vector2( 177.877, 64.5946 )
 __meta__ = {
 "_edit_group_": true
@@ -803,7 +780,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 4" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 visible = false
 position = Vector2( 884.59, -30.4123 )
 __meta__ = {
@@ -834,7 +810,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 4_1" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 position = Vector2( 170.644, 123.443 )
 __meta__ = {
 "_edit_group_": true
@@ -845,7 +820,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 5" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 visible = false
 position = Vector2( 1485.22, 176.939 )
 __meta__ = {
@@ -876,7 +850,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 5_1" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 position = Vector2( 350.007, 122.721 )
 __meta__ = {
 "_edit_group_": true
@@ -887,7 +860,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 6" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 visible = false
 position = Vector2( 2176.28, 269.176 )
 __meta__ = {
@@ -917,7 +889,6 @@ position = Vector2( 88.3958, 111.363 )
 shape = SubResource( 4 )
 
 [node name="Cartel 7" type="Area2D" parent="Carteles"]
-editor/display_folded = true
 visible = false
 position = Vector2( 1724.06, 419.318 )
 __meta__ = {
@@ -954,7 +925,6 @@ position = Vector2( 386.064, 83.0715 )
 scale = Vector2( 2.24, 1 )
 
 [node name="Muro" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1114.31, -111.19 )
 script = ExtResource( 18 )
 __meta__ = {
@@ -1028,6 +998,11 @@ texture = ExtResource( 21 )
 [node name="Timer" type="Timer" parent="Puerta"]
 wait_time = 4.0
 one_shot = true
+
+[node name="Municiones" type="Node" parent="."]
+
+[node name="Area2D" parent="Municiones" instance=ExtResource( 22 )]
+position = Vector2( 184, -432 )
 [connection signal="body_entered" from="Palanca1" to="Trampa/Trampas" method="_on_Palanca1_body_entered"]
 [connection signal="body_entered" from="Palanca2" to="Muro" method="_on_Palanca2_body_entered"]
 [connection signal="body_entered" from="Palanca3" to="Muro" method="_on_Palanca2_body_entered"]

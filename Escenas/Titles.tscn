@@ -200,8 +200,9 @@ custom_fonts/font = ExtResource( 11 )
 text = "Programador:
 Azcuenaga Cristian
 Ignacio Peralta
+Fuentes Nicolas
 Musica:
-Francisco Bauman"
+Francisco Baumann"
 __meta__ = {
 "_edit_use_anchors_": false
 }

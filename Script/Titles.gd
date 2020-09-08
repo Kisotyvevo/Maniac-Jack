@@ -3,7 +3,21 @@ var Mundo = "res://Escenas/Mundo.tscn"
 
 func _ready():
 	pass
-
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		$"Loading".visible = true
+		$Inicio.visible = false
+		$Creditos.visible = false
+		$MarginContainer/VBoxContainer/TextureRect.visible = false
+		$Nuces/Sprite.visible = false
+		$Nuces/Sprite2.visible = false
+		$Nuces/Sprite3.visible = false
+		$Nuces/Sprite4.visible = false
+		$Nuces/Sprite5.visible = false
+		$Nuces/Sprite6.visible = false
+		$Loading/AnimatedSprite.play("Cargando")
+		$Timer.start()
+		load(Mundo)
 func _on_Inicio_pressed():
 	$"Loading".visible = true
 	$Inicio.visible = false
@@ -18,7 +32,7 @@ func _on_Inicio_pressed():
 	$Loading/AnimatedSprite.play("Cargando")
 	$Timer.start()
 	load(Mundo)
-	
+
 
 func _on_ButtonInicio_pressed():
 	

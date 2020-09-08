@@ -4,7 +4,7 @@ func _ready():
 	pass
 
 
-func _on_Palanca2_body_entered(body):
+func _on_Palanca3_body_entered(body):
 	if "Player" in body.name:
 		$"../Palanca3/Palanca3 anim".play("Off")
 		$".".visible = false
