@@ -219,7 +219,7 @@ margin_bottom = -9.81226
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 1, 0.890196, 0, 1 )
-text = "V 0.1.0"
+text = "(V 0.5.1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
