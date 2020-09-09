@@ -16,10 +16,13 @@ func _ready():
 #	pass
 
 
-func _on_Area2D_body_entered(body):
-	if "Player" in body.name:
-		$Puerta.visible = true
+
+
+
+func _on_fin_body_entered(body):
+	if body.is_in_group("Player"):
 		$"Player/Audio del nivel".stop()
 		$Player/Win.play()
+		Controlador.nivel1cc()
 		get_tree().change_scene("res://Escenas/FinDelJuego.tscn")
 

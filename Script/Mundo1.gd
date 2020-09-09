@@ -51,15 +51,13 @@ func _on_Cartel_7_body_entered(body):
 	if "Player" in body.name:
 		$"Carteles/Cartel 7".visible = true
 
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+
 
 func _on_Puerta_body_entered(body):
-	if "Player" in body.name:
-		$Puerta.visible = true
+	if body.is_in_group("Player"):
 		$"Player/Audio del nivel".stop()
 		$Player/Win.play()
 		Controlador.nivel1cc()
 		get_tree().change_scene("res://Escenas/Mundo 2.tscn")
-
-
-func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")

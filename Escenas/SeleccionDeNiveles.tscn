@@ -52,11 +52,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="."]
-margin_left = 322.652
-margin_top = 37.799
-margin_right = 622.652
-margin_bottom = 235.799
+[node name="Buttonnivel2" type="Button" parent="."]
+visible = false
+margin_left = 313.0
+margin_top = 36.0
+margin_right = 613.0
+margin_bottom = 234.0
 focus_mode = 1
 action_mode = 0
 button_mask = 7
@@ -65,16 +66,15 @@ icon = ExtResource( 2 )
 flat = true
 clip_text = true
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Button2"]
+[node name="Label2" type="Label" parent="Buttonnivel2"]
 anchor_right = 0.14
-margin_left = 76.0
-margin_top = 51.0
-margin_right = 184.0
-margin_bottom = 99.0
+margin_left = 72.0
+margin_top = 47.0
+margin_right = 180.0
+margin_bottom = 95.0
 rect_scale = Vector2( 1, 2 )
 rect_pivot_offset = Vector2( 4, 0 )
 custom_fonts/font = ExtResource( 3 )
@@ -89,6 +89,7 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="."]
+visible = false
 margin_left = 656.652
 margin_top = 39.799
 margin_right = 956.652
@@ -128,6 +129,8 @@ __meta__ = {
 stream = ExtResource( 5 )
 volume_db = 10.0
 autoplay = true
+max_distance = 9000.0
+attenuation = 0.00929064
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 536, 433 )
@@ -163,6 +166,6 @@ position = Vector2( 36, 34 )
 scale = Vector2( 1.82353, 1.9697 )
 texture = ExtResource( 7 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Buttonnivel2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="volver atras" to="." method="_on_volver_atras_pressed"]

@@ -995,13 +995,12 @@ shape = SubResource( 2 )
 position = Vector2( 386.064, 83.0715 )
 scale = Vector2( 2.24, 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="fin" type="Area2D" parent="."]
 position = Vector2( 4106.17, -795.531 )
 scale = Vector2( 0.659722, 0.736979 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fin"]
 position = Vector2( 1.07178, 2.87866 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 [connection signal="body_entered" from="Carteles/Cartel 1" to="." method="_on_Cartel_1_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 2" to="." method="_on_Cartel_2_body_entered"]
@@ -1013,4 +1012,4 @@ shape = SubResource( 3 )
 [connection signal="body_entered" from="Carteles/Cartel 5_1" to="." method="_on_Cartel_5_1_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 6" to="." method="_on_Cartel_6_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 7" to="." method="_on_Cartel_7_body_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="fin" to="." method="_on_fin_body_entered"]
