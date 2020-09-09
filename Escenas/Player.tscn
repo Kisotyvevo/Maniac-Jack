@@ -38,30 +38,30 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "Hurt",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Agachado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "Jump",
-"speed": 15.0
+"name": "Run",
+"speed": 18.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "Run",
-"speed": 18.0
+"name": "Hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 15.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -69,14 +69,14 @@ extents = Vector2( 9.43385, 12.6104 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 26 ) ],
-"loop": true,
-"name": "NoVida",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 25 ) ],
 "loop": true,
 "name": "Vida",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "NoVida",
 "speed": 5.0
 } ]
 
@@ -93,7 +93,7 @@ gravity = 10
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 7
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

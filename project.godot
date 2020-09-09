@@ -21,6 +21,10 @@ boot_splash/image="res://logo 1920 2.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://heart.png"
 
+[autoload]
+
+Controlador="*res://controlador.gd"
+
 [display]
 
 window/size/fullscreen=true

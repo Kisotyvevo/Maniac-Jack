@@ -1,5 +1,6 @@
 extends Node
 var Mundo = "res://Escenas/Mundo.tscn"
+var selecLevel = "res://Escenas/SeleccionDeNiveles.tscn"
 
 func _ready():
 	pass
@@ -15,9 +16,10 @@ func _process(delta):
 		$Nuces/Sprite4.visible = false
 		$Nuces/Sprite5.visible = false
 		$Nuces/Sprite6.visible = false
+		$Creditos2.visible = false
 		$Loading/AnimatedSprite.play("Cargando")
 		$Timer.start()
-		load(Mundo)
+		load(selecLevel)
 func _on_Inicio_pressed():
 	$"Loading".visible = true
 	$Inicio.visible = false
@@ -31,7 +33,7 @@ func _on_Inicio_pressed():
 	$Nuces/Sprite6.visible = false
 	$Loading/AnimatedSprite.play("Cargando")
 	$Timer.start()
-	load(Mundo)
+	load(selecLevel)
 
 
 func _on_ButtonInicio_pressed():
@@ -51,9 +53,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_select"):
 		get_tree().quit()
 	if Input.is_action_pressed("ui_up"):
-		get_tree().change_scene("res://Escenas/Mundo.tscn")
+		get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/Mundo.tscn")
+	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
 	pass # Replace with function body.

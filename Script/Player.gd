@@ -5,6 +5,9 @@ export (int) var gravity
 const jump_power = -250
 const FLOOR = Vector2(0, -1)
 
+var nivel1fin = false
+var nivel2fin = false
+
 const FIREBALL = preload("res://Escenas/Fireball.tscn")
 var MunicionActual = 5
 var MunicionMax = 15
@@ -148,6 +151,7 @@ func dead():
 	$CollisionShape2D.disabled = true
 	$Timer.start()
 	
+	
 func DisparosSIoNo():
 	if MunicionActual >=1:
 		PoderDisparar = true
@@ -165,7 +169,7 @@ func colision():
 		$Timer4.start()
 						
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/Titles.tscn")
+	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
 
 
 func _on_Timer2_timeout():
@@ -264,10 +268,6 @@ func Munciones_en_pantalla():
 func Recogiendo_Municiones():
 	if MunicionMax > MunicionActual:
 		MunicionActual += 1
-		get_tree().get_nodes_in_group("Municion")[0].Destruir()
-	else:
-		pass
-
 func _on_TouchScreenButton_released():
 	Atras = false
 	Quieto()

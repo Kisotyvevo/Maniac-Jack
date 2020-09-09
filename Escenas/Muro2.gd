@@ -6,7 +6,7 @@ func _ready():
 
 func _on_Palanca3_body_entered(body):
 	if "Player" in body.name:
-		$"../Palanca3/Palanca3 anim".play("Off")
+		$"../Palanca3/Palanca2 anim".play("Off")
 		$".".visible = false
 		$CollisionShape2D.disabled = true
 		$Timer.start()
