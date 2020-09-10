@@ -5,6 +5,8 @@ var selecLevel = "res://Escenas/SeleccionDeNiveles.tscn"
 func _ready():
 	pass
 func _process(delta):
+	if Input.is_action_just_pressed("cerrar juego"):
+		get_tree().quit()
 	if Input.is_action_just_pressed("ui_accept"):
 		$"Loading".visible = true
 		$Inicio.visible = false
@@ -59,3 +61,7 @@ func _physics_process(delta):
 func _on_Timer_timeout():
 	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
 	pass # Replace with function body.
+
+
+func _on_Button_pressed():
+	get_tree().quit()

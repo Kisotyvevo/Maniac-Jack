@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
 [ext_resource path="res://Players/player/idle/player-idle-1.png" type="Texture" id=2]
@@ -35,6 +35,9 @@
 [ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=33]
 [ext_resource path="res://Musica/Salto.wav" type="AudioStream" id=34]
 [ext_resource path="res://Musica/Pasos.wav" type="AudioStream" id=35]
+[ext_resource path="res://UI/barsHorizontal.png" type="Texture" id=36]
+[ext_resource path="res://title-screen2.png" type="Texture" id=37]
+[ext_resource path="res://Escenas/butonpause.gd" type="Script" id=38]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -48,11 +51,6 @@ animations = [ {
 "name": "Hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Agachado",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "Idle",
@@ -62,6 +60,11 @@ animations = [ {
 "loop": true,
 "name": "Run",
 "speed": 18.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Agachado",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -79,6 +82,20 @@ animations = [ {
 "name": "Vida",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Texto/Summer Blaster Italic.otf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 9
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Texto/Summer Blaster.otf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 10
+font_data = SubResource( 6 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" groups=[
 "Player",
@@ -190,12 +207,73 @@ anchor_bottom = -0.072
 margin_left = -0.424
 margin_top = 0.199997
 margin_right = 29.576
-margin_bottom = 13.2
-custom_fonts/font = ExtResource( 33 )
+margin_bottom = 16.2
+custom_fonts/font = SubResource( 5 )
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="Camera2D/CanvasLayer"]
+pause_mode = 2
+margin_left = 162.0
+margin_top = -38.0
+margin_right = 186.0
+margin_bottom = -18.0
+flat = true
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon pause" type="Sprite" parent="Camera2D/CanvasLayer/Button"]
+pause_mode = 2
+position = Vector2( 10.9096, 9.8995 )
+scale = Vector2( 0.531288, 0.442396 )
+texture = ExtResource( 36 )
+
+[node name="cosa0" type="Sprite" parent="Camera2D/CanvasLayer/Button"]
+pause_mode = 2
+visible = false
+position = Vector2( -119.4, 77.9838 )
+scale = Vector2( 0.709581, 0.772716 )
+texture = ExtResource( 37 )
+
+[node name="cosa" type="Label" parent="Camera2D/CanvasLayer/Button"]
+pause_mode = 2
+visible = false
+margin_left = -166.232
+margin_top = 47.0751
+margin_right = -33.2324
+margin_bottom = 127.075
+custom_fonts/font = SubResource( 7 )
+text = "Renaudar
+
+Salir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="renaudar" type="Button" parent="Camera2D/CanvasLayer/Button"]
+pause_mode = 2
+visible = false
+margin_left = -169.045
+margin_top = 49.2955
+margin_right = -72.0447
+margin_bottom = 69.2955
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="salir" type="Button" parent="Camera2D/CanvasLayer/Button"]
+pause_mode = 2
+visible = false
+margin_left = -168.0
+margin_top = 86.0
+margin_right = -74.0
+margin_bottom = 106.0
+flat = true
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 25.5, 5.647 )
@@ -238,6 +316,9 @@ bus = "Pasos"
 [connection signal="pressed" from="Camera2D/CanvasLayer/TouchScreenButton6" to="." method="_on_TouchScreenButton6_pressed"]
 [connection signal="released" from="Camera2D/CanvasLayer/TouchScreenButton6" to="." method="_on_TouchScreenButton6_released"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/TouchScreenButton5" to="." method="_on_TouchScreenButton5_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="Camera2D/CanvasLayer/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Button/renaudar" to="Camera2D/CanvasLayer/Button" method="_on_renaudar_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Button/salir" to="Camera2D/CanvasLayer/Button" method="_on_salir_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
 [connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]

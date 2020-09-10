@@ -369,3 +369,14 @@ func _on_TouchScreenButton6_pressed():
 func _on_TouchScreenButton6_released():
 	Agachado = false
 	pass # Replace with function body.
+
+
+func _on_pause_pressed():
+	$pause/contenedorpause.visible = true
+	$pause/Label/renaudar.visible = true
+	$pause/Label/salir.visible = true
+	pass
+
+
+func _on_renaudar_pressed():
+	pass # Replace with function body.

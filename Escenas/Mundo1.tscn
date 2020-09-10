@@ -49,7 +49,7 @@ extents = Vector2( 15.048, 10 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 15.6318, 31.0896 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 13.2574, 21.471 )
 
 [node name="mundo 1" type="Node2D"]
@@ -632,7 +632,7 @@ position = Vector2( 1855.56, 528.547 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
 position = Vector2( -0.387451, -2.51819 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="Timer" type="Timer" parent="Puerta"]
 wait_time = 4.0

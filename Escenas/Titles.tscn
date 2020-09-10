@@ -235,8 +235,24 @@ texture = ExtResource( 14 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Loading"]
 frames = SubResource( 1 )
 animation = "Cargando"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 6.0
+margin_top = 8.0
+margin_right = 89.0
+margin_bottom = 89.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Button"]
+position = Vector2( 39.1127, 40.2843 )
+scale = Vector2( 1.7487, 1.51426 )
+texture = ExtResource( 12 )
 [connection signal="pressed" from="Inicio" to="." method="_on_Inicio_pressed"]
 [connection signal="pressed" from="Creditos/Creditos" to="." method="_on_Creditos_pressed"]
 [connection signal="pressed" from="title-Inicio/Button-Inicio" to="." method="_on_ButtonInicio_pressed"]
 [connection signal="pressed" from="Creditos2/Atras" to="." method="_on_Atras_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
