@@ -19,8 +19,9 @@ func _process(delta):
 		$Nuces/Sprite5.visible = false
 		$Nuces/Sprite6.visible = false
 		$Creditos2.visible = false
-		$Loading/AnimatedSprite.play("Cargando")
-		$Timer.start()
+		get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+		#$Loading/AnimatedSprite.play("Cargando")
+		#$Timer.start()
 		load(selecLevel)
 func _on_Inicio_pressed():
 	$"Loading".visible = true
@@ -33,8 +34,9 @@ func _on_Inicio_pressed():
 	$Nuces/Sprite4.visible = false
 	$Nuces/Sprite5.visible = false
 	$Nuces/Sprite6.visible = false
-	$Loading/AnimatedSprite.play("Cargando")
-	$Timer.start()
+	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+	#$Loading/AnimatedSprite.play("Cargando")
+	#$Timer.start()
 	load(selecLevel)
 
 

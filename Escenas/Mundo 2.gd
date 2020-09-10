@@ -26,5 +26,5 @@ func _on_Puerta_body_entered(body):
 		$"Player/Audio del nivel".stop()
 		$Player/Win.play()
 		Controlador.nivel2cc()
-		get_tree().change_scene("res://Escenas/Mundo 3.tscn")
+		get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
 

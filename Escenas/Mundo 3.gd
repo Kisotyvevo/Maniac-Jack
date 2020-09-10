@@ -24,5 +24,6 @@ func _on_fin_body_entered(body):
 		$"Player/Audio del nivel".stop()
 		$Player/Win.play()
 		Controlador.nivel1cc()
+		Controlador.nivel3cc()
 		get_tree().change_scene("res://Escenas/FinDelJuego.tscn")
 
