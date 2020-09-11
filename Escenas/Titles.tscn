@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Script/Titles.gd" type="Script" id=1]
 [ext_resource path="res://Escenas/ParallaxBackground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Musica/MenuMusic.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Players/acorn/acorn-1.png" type="Texture" id=5]
 [ext_resource path="res://logo (1).png" type="Texture" id=6]
 [ext_resource path="res://press-enter-text.png" type="Texture" id=7]
@@ -10,7 +11,6 @@
 [ext_resource path="res://title-screen.png" type="Texture" id=10]
 [ext_resource path="res://Texto/Fuente.tres" type="DynamicFont" id=11]
 [ext_resource path="res://boton back.png" type="Texture" id=12]
-[ext_resource path="res://Musica/1_4943166951473021037.ogg" type="AudioStream" id=13]
 [ext_resource path="res://Loading.png" type="Texture" id=14]
 [ext_resource path="res://Punto.png" type="Texture" id=15]
 [ext_resource path="res://Punto2.png" type="Texture" id=16]
@@ -185,7 +185,7 @@ margin_bottom = 50.8203
 rect_scale = Vector2( 0.7, 0.8 )
 custom_fonts/font = ExtResource( 11 )
 text = "Music and
-Level Desing:
+Level Design:
 Francisco Baumann"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -203,9 +203,7 @@ position = Vector2( 11.2044, 10.0523 )
 scale = Vector2( 0.594481, 0.615617 )
 texture = ExtResource( 12 )
 
-[node name="Menu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
-autoplay = true
+[node name="Menu" parent="." instance=ExtResource( 3 )]
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 1.0

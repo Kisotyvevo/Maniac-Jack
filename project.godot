@@ -27,6 +27,7 @@ Controlador="*res://controlador.gd"
 
 [display]
 
+window/size/width=799
 window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
