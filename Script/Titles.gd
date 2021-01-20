@@ -41,7 +41,6 @@ func _on_Inicio_pressed():
 
 
 func _on_ButtonInicio_pressed():
-	
 	pass
 
 func _on_Creditos_pressed():

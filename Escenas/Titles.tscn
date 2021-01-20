@@ -248,6 +248,7 @@ __meta__ = {
 position = Vector2( 39.1127, 40.2843 )
 scale = Vector2( 1.7487, 1.51426 )
 texture = ExtResource( 12 )
+
 [connection signal="pressed" from="Inicio" to="." method="_on_Inicio_pressed"]
 [connection signal="pressed" from="Creditos/Creditos" to="." method="_on_Creditos_pressed"]
 [connection signal="pressed" from="title-Inicio/Button-Inicio" to="." method="_on_ButtonInicio_pressed"]
