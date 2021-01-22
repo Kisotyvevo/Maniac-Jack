@@ -173,7 +173,7 @@ func colision():
 		$Timer4.start()
 						
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+	get_tree().change_scene("res://Escenas/Titles.tscn")
 
 
 func _on_Timer2_timeout():

@@ -29,14 +29,14 @@ loop_end = 1
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 21 ) ],
-"loop": true,
-"name": "On ",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
 "name": "Off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "On ",
 "speed": 5.0
 } ]
 
@@ -699,6 +699,7 @@ position = Vector2( 1713.66, 391.973 )
 
 [node name="municiones12" parent="Municiones" instance=ExtResource( 4 )]
 position = Vector2( 737.662, 46.973 )
+
 [connection signal="body_entered" from="Palanca1" to="Trampa/Trampas" method="_on_Palanca1_body_entered"]
 [connection signal="body_entered" from="Palanca2" to="Muro" method="_on_Palanca2_body_entered"]
 [connection signal="body_entered" from="Carteles/Cartel 1" to="." method="_on_Cartel_1_body_entered"]

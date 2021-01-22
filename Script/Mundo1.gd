@@ -52,7 +52,7 @@ func _on_Cartel_7_body_entered(body):
 		$"Carteles/Cartel 7".visible = true
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+	get_tree().change_scene("res://Escenas/Titles.tscn")
 
 
 func _on_Puerta_body_entered(body):
@@ -60,4 +60,4 @@ func _on_Puerta_body_entered(body):
 		$"Player/Audio del nivel".stop()
 		$Player/Win.play()
 		Controlador.nivel1cc()
-		get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+		get_tree().change_scene("res://Escenas/Titles.tscn")

@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+	get_tree().change_scene("res://Escenas/Titles.tscn")
 
 
 func _on_Puerta_body_entered(body):
@@ -26,5 +26,5 @@ func _on_Puerta_body_entered(body):
 		$"Player/Audio del nivel".stop()
 		$Player/Win.play()
 		Controlador.nivel2cc()
-		get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+		get_tree().change_scene("res://Escenas/Titles.tscn")
 
