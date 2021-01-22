@@ -37,9 +37,9 @@ __meta__ = {
 
 [node name="Label2" type="Label" parent="Button"]
 anchor_right = 0.14
-margin_left = 72.0
+margin_left = 70.7401
 margin_top = 47.0
-margin_right = 180.0
+margin_right = 178.74
 margin_bottom = 95.0
 rect_scale = Vector2( 1, 2 )
 rect_pivot_offset = Vector2( 4, 0 )
@@ -176,6 +176,7 @@ __meta__ = {
 }
 
 [node name="Menu" parent="." instance=ExtResource( 5 )]
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Buttonnivel2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

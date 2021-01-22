@@ -30,6 +30,10 @@ var Minutos = 3
 var Delay = false
 
 func _ready():
+	if OS.get_name() == "Windows":
+		OcultarBotones()
+	if OS.get_name() == "Linux":
+		OcultarBotones()
 	$Timer5.start()
 	$Camera2D/CanvasLayer/TouchScreenButton5.hide()
 

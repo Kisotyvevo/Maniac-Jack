@@ -3,7 +3,9 @@ var Mundo1 = "res://Escenas/Mundo.tscn"
 var Mundo2 = "res://Escenas/Mundo2.tscn"
 var Mundo3 = "res://Escenas/Mundo.tscn"
 var boton3bloqueado = true
+
 func _ready():
+	self.visible = false
 	pass 
 
 
@@ -15,8 +17,9 @@ func _process(delta):
 	Controlador.nivel2Complete
 	Controlador.nivel3Complete
 	
-
-
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST and $self.visible == true:
+		self.visible = false
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Escenas/Mundo1.tscn")
@@ -39,10 +42,14 @@ func desbloquearboton3():
 		#boton3bloqueado = false
 func _on_Button3_pressed():
 	if Controlador.nivel2Complete == true:
+		self.visible = false
 		get_tree().change_scene("res://Escenas/Mundo 3.tscn")
 func _on_volver_atras_pressed():
-	get_tree().change_scene("res://Escenas/Titles.tscn")
+	self.visible = false
+	
+	#get_tree().change_scene("res://Escenas/Titles.tscn")
 
 func _on_Button2_pressed():
 	if Controlador.nivel1Complete == true:
+		self.visible = false
 		get_tree().change_scene("res://Escenas/Mundo 2.tscn")

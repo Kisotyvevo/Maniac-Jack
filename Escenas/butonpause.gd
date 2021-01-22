@@ -30,7 +30,7 @@ func _on_Button_pressed():
 func _on_salir_pressed():
 	if get_tree().paused == true:
 		get_tree().paused = false
-		get_tree().change_scene("res://Escenas/SeleccionDeNiveles.tscn")
+		get_tree().change_scene("res://Escenas/Titles.tscn")
 
 func _on_renaudar_pressed():
 	if get_tree().paused == true:

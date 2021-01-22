@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Script/Titles.gd" type="Script" id=1]
 [ext_resource path="res://Escenas/ParallaxBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Musica/MenuMusic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/SeleccionDeNiveles.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Players/acorn/acorn-1.png" type="Texture" id=5]
 [ext_resource path="res://logo (1).png" type="Texture" id=6]
 [ext_resource path="res://press-enter-text.png" type="Texture" id=7]
@@ -62,8 +63,11 @@ scale = Vector2( 2.84442, 2.58139 )
 texture = ExtResource( 5 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_right = 1.0
-margin_bottom = 640.0
+anchor_right = 1.281
+anchor_bottom = 1.067
+margin_left = -0.260998
+margin_right = -1023.3
+margin_bottom = -0.200012
 custom_constants/margin_right = 0
 custom_constants/margin_top = 20
 custom_constants/margin_left = 0
@@ -85,14 +89,14 @@ margin_bottom = 600.0
 texture = ExtResource( 6 )
 
 [node name="Inicio" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -98.0
-margin_top = 164.0
-margin_right = 91.0
-margin_bottom = 211.0
+anchor_left = 0.377
+anchor_top = 0.773
+anchor_right = 0.614
+anchor_bottom = 0.852
+margin_left = 0.277008
+margin_top = 0.199951
+margin_right = -0.0860291
+margin_bottom = -0.200043
 flat = true
 __meta__ = {
 "_edit_group_": true,
@@ -110,10 +114,12 @@ scale = Vector2( 0.763371, 0.38765 )
 texture = ExtResource( 8 )
 
 [node name="Creditos" type="Button" parent="Creditos"]
+anchor_right = 0.76
+anchor_bottom = 0.721
 margin_left = -75.0
 margin_top = -43.5796
-margin_right = 75.0
-margin_bottom = 42.4204
+margin_right = -143.88
+margin_bottom = -96.0116
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -235,10 +241,15 @@ frames = SubResource( 1 )
 animation = "Cargando"
 
 [node name="Button" type="Button" parent="."]
-margin_left = 6.0
-margin_top = 8.0
-margin_right = 89.0
-margin_bottom = 89.0
+visible = false
+anchor_left = 0.008
+anchor_top = 0.013
+anchor_right = 0.111
+anchor_bottom = 0.148
+margin_left = -0.392
+margin_top = 0.2
+margin_right = 0.310989
+margin_bottom = 0.199997
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -248,6 +259,9 @@ __meta__ = {
 position = Vector2( 39.1127, 40.2843 )
 scale = Vector2( 1.7487, 1.51426 )
 texture = ExtResource( 12 )
+
+[node name="SeleccionDeNiveles" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0.0421143, 2.29797 )
 
 [connection signal="pressed" from="Inicio" to="." method="_on_Inicio_pressed"]
 [connection signal="pressed" from="Creditos/Creditos" to="." method="_on_Creditos_pressed"]
